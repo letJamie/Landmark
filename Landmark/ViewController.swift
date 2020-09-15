@@ -13,6 +13,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var landmarkNames = [String]()
     var landMarkImage = [UIImage]()
+    
+    var selectedName = ""
+    var selectedImage = UIImage()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         landMarkImage.append(UIImage(named: "kremlin.jpeg")!)
         landMarkImage.append(UIImage(named: "stonehenge.jpg")!)
         landMarkImage.append(UIImage(named: "tajmahal.jpg")!)
+        
+        navigationItem.title = "Landmark"
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,7 +47,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return landmarkNames.count
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+                
+            landmarkNames.remove(at: indexPath.row)
+            landMarkImage.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
+    }
   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedName = landmarkNames[indexPath.row]
+        selectedImage = landMarkImage[indexPath.row]
+        performSegue(withIdentifier: "toImageVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if segue.identifier == "toImageVC" {
+            
+            let secondVC = segue.destination as! SecondViewController
+
+            secondVC.selectedName = selectedName
+            secondVC.selectedImage = selectedImage
+            
+        }
+       
+        
+        
+    }
 
 }
 

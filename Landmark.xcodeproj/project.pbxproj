@@ -18,6 +18,7 @@
 		7DE3ECD5250E735D001449DC /* kremlin.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3ECD0250E735D001449DC /* kremlin.jpeg */; };
 		7DE3ECD6250E735D001449DC /* tajmahal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3ECD1250E735D001449DC /* tajmahal.jpg */; };
 		7DE3ECD7250E735D001449DC /* colosseum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3ECD2250E735D001449DC /* colosseum.jpg */; };
+		7DF6B1D825110F6B00164A78 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF6B1D725110F6B00164A78 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		7DE3ECD0250E735D001449DC /* kremlin.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kremlin.jpeg; sourceTree = "<group>"; };
 		7DE3ECD1250E735D001449DC /* tajmahal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajmahal.jpg; sourceTree = "<group>"; };
 		7DE3ECD2250E735D001449DC /* colosseum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = colosseum.jpg; sourceTree = "<group>"; };
+		7DF6B1D725110F6B00164A78 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				7DE3ECD1250E735D001449DC /* tajmahal.jpg */,
 				7DE3ECBC250E6D1A001449DC /* SceneDelegate.swift */,
 				7DE3ECBE250E6D1A001449DC /* ViewController.swift */,
+				7DF6B1D725110F6B00164A78 /* SecondViewController.swift */,
 				7DE3ECC0250E6D1A001449DC /* Main.storyboard */,
 				7DE3ECC3250E6D1B001449DC /* Assets.xcassets */,
 				7DE3ECC5250E6D1B001449DC /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF6B1D825110F6B00164A78 /* SecondViewController.swift in Sources */,
 				7DE3ECBF250E6D1A001449DC /* ViewController.swift in Sources */,
 				7DE3ECBB250E6D1A001449DC /* AppDelegate.swift in Sources */,
 				7DE3ECBD250E6D1A001449DC /* SceneDelegate.swift in Sources */,
